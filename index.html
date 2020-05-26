@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Tiffany Lau</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!--favicon doesn't work on safari.. tears..-->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io//site.webmanifest">
+
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            width: auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: unset;
+        }
+
+        .funfacts {
+            position: relative;
+            max-width: 100%;
+            height: 10vh;
+            background-color: #484c5a;
+            border: 1px solid #000000;
+            padding: 5px;
+        }
+        .funfacts_description {
+            color: #fcfcf1be;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 16px;
+            text-shadow: 3px 2px 9px #4d4d4d5e;  
+            top: 50%;
+            position: inherit;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+        #navbar {
+            position: fixed;
+            width: 97%;
+            height: 8vh;
+            display: block;
+            transition: 0.3s;
+            z-index: 14;
+            padding: 5vh 2vw;
+        }
+        #navbar a{
+            float: left;
+            display: block;
+            color: #f9f9e6;
+            text-align: right;
+            margin-left: 3.4vw;
+            margin-right: 3.4vw;
+            font-size: 1.5vw;
+            letter-spacing: 0.2vw;
+            z-index: 14;
+            text-shadow: 3px 2px 9px #00000098;
+            font-family: "Raleway",sans-serif;
+
+            /* position: relative;
+            top: 100%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); */
+        }
+        #options {
+            display: none;
+            position: relative;
+        }
+        #navbar-right {
+            float: right;
+            display: none;
+            position: relative;
+        }
+        #navbar-right img{
+            width: 2.2vw;
+            text-align: center;
+            margin-right: 1.2vw;
+            margin-left: 1.2vw;
+            z-index: 15;
+            cursor: pointer;
+            filter: drop-shadow(0.5px 0.5px 20px #f9f9e6);
+        }
+        #navbar a:hover {
+            text-decoration: underline overline;
+            z-index: 15;
+        }
+
+        #container {
+            display: inline-block;
+            cursor: pointer;
+            position: relative;
+            margin-right: 3vw;
+        }
+        .bar1, .bar2, .bar3 {
+            width: 2vw;
+            height: 0.3vh;
+            background-color: #f9f9e6;
+            margin: 5px 0;
+            transition: 0.4s;
+            box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+        }
+        .change .bar1 {
+            -webkit-transform: rotate(-45deg) translate(-7px, 3px);
+            transform: rotate(-45deg) translate(-7px, 3px);
+        }
+        .change .bar2 {
+            -webkit-transform: translate(-1px, -1px);
+            transform:translate(-1px, -1px);
+        }
+        .change .bar3 {
+            -webkit-transform: rotate(45deg) translate(-8px, -5px);
+            transform: rotate(45deg) translate(-8px, -5px);
+        }
+                
+        #home {
+            position: relative;
+            max-width: 100%;
+            width: 100%;
+            height: 100vh;
+            z-index: 8;
+            background-image: url(img/leaves.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .green {
+            background-color: #a6ef81d3;
+            max-width: 60%;
+            width: 60vw;
+            height: 100vh;
+            position: absolute;
+            z-index: 9;
+        }
+        .beige {
+            background-color: #f9f9e6;
+            max-width: 40%;
+            width: 40vw;
+            height: 100vh;
+            position: absolute;
+            z-index: 9;
+            left: 60vw;
+        }
+        .pink {
+            background-color: #ffb8b8;
+            width: 27vw;
+            height: 74vh;
+            position: absolute;
+            z-index: 10;
+            bottom: 1.5em;
+            left: 53.5vw;
+            box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+        }
+        .picture {
+            position: absolute;
+            z-index: 11;
+            width: 27vw;
+            height: 74vh;
+            bottom: 0;
+            left: 50vw;
+            box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+        }
+        .text {
+            z-index: 13;
+            position: relative;
+            width: fit-content;
+            top: 55vh;
+            left: 18.2vw;
+            transform: rotate(90deg);
+            font-size:2vw;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #f9f9e6;
+            text-shadow: 1px 1px 1px #00000030;
+        }
+        .name_box {
+            position: absolute;
+            max-width: 35%;
+            width: 35vw;
+            height: 74vh;
+            top: 18vh;
+            left: 9vw;
+            z-index: 12;
+        }
+        .paint {
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            z-index: 12;
+            transform: rotate(30deg);
+            background-image: url(img/paint.png);
+            background-size: 110%, 110%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .name {
+            text-align: center;
+            color: #f9f9e6;
+            font-family: Baskerville;
+            font-size: 4.5vw;
+            text-shadow: 3px 3px 2px #00000030;
+            z-index: 12;
+            margin: auto;
+            margin-right: 0.55em;
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+            height: fit-content;
+        }
+
+        canvas {
+            display: block;
+            vertical-align: bottom;
+        }
+
+        #about {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 100%;
+            width: 100%;
+            max-height: fit-content;
+            background-color: #F7F7F7;
+        }
+        #about-container {
+            display:flex;
+            flex-direction: row;
+            max-height: fit-content;
+        }
+        #about-container-right {
+            height: fit-content;
+            margin-left: 9em
+        }
+        .profile_pic {
+            max-width: 18em;
+            height: 18em;
+            margin: auto;
+            border-radius: 50%;
+            filter: drop-shadow(0px 0px 50px #ddfdf7);
+        }
+        .about_title {
+            font-family: "Raleway", sans-serif;
+            font-size:30px;
+            letter-spacing:5px;
+            font-weight:400;
+        }
+        .about_description {
+            font-family: "Raleway", sans-serif;
+            font-size:16px;
+            letter-spacing:1px;
+            color:#616161;
+            line-height:23px;
+        }
+        .about_motto {
+            font-family: "Raleway", sans-serif;
+            font-size:15px;
+            letter-spacing:1px;
+            color:#616161;
+            line-height:23px;
+        }
+        /* Fix the transitions for the boxes/buttons */
+        .about_links {
+            position: absolute;
+            max-width: 50%;
+            top: 55vh;
+            left: 42vw;
+            font-family: "Raleway", sans-serif;
+        }
+        .about_box {
+            position: absolute;
+            border: 1px solid #dddddd;
+            padding: 3vh;
+            padding-left: 4vw;
+            padding-right: 4vw;
+        }
+        .about_box:hover{
+            border: 1px solid #fd9a9a;
+        }
+        .about_box_transition {
+            margin-left:20px;
+            margin-right:20px;
+            margin-bottom:10px;
+        }
+        .about_box_transition:hover{
+            top:0px;
+        }
+
+        .title {
+            position: relative;
+            text-align: center;
+            padding-top: 15vh;
+            padding-bottom: 3vh;
+            letter-spacing: 4px;
+            line-height: 32px;
+            font-family: "Raleway",sans-serif;
+            color: #323232;
+            z-index: 2;
+        }
+        .hr_style {
+            height:2px;
+            border-width:0;
+            background-color:#a0a0a0;
+        }
+
+        #education {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 100%;
+            width: 100%;
+            max-height: fit-content;
+        }
+        .education_container {
+            display:flex;
+            flex-direction: row;
+            max-height: fit-content;
+            margin: auto;
+        }
+        .education_container_left {
+            height: fit-content;
+            text-align: center;
+        }
+        .cu_pic {
+            margin: auto;
+            max-width: 22em;
+            height: 20em;
+            border-radius: 50%;
+            filter: drop-shadow(0px 0px 50px #ddfdf7);
+        }
+        .education_text {
+            height: fit-content;
+            margin-left: 5.4em;
+            font-family: "Raleway", sans-serif;
+        }
+        .education_title {
+            font-size:28px;
+            letter-spacing:2px;
+            font-weight:500;
+            margin-bottom:2.5vh;
+            text-shadow: 3px 3px 2px #00000030;
+        }
+        .education_text_inner {
+            color:#616161;
+            font-family:Raleway,sans-serif;
+            line-height:3.2vh;
+        }
+
+        #experience {
+            position: relative;
+            max-width: 100%;
+            width: 100vw;
+            height: fit-content;
+            background-color: #484c5ada;
+        }
+        .office {
+            position: absolute;
+            max-width: 100%;
+            width: 100vw;
+            min-height: 100%;
+            max-height: fit-content;
+            background-image: url("office/26.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            filter:blur(2px) opacity(25%);
+        }
+        .experience_box {
+            max-width: 65%;
+            width: 65vw;
+            height: fit-content;
+            background-color: #000000;
+            border: 3px solid #f1f1f1;
+            padding-top: 3vh;
+            padding-bottom: 3vh;
+            margin: auto;
+        }
+        .experience_name  {
+            color: #77d6cd;
+            font-family: "Raleway", sans-serif;
+            padding: 0vh 4vw;
+            padding-bottom: 1vh;
+            letter-spacing: 0.15vh;
+            line-height: 3vh;
+            display: flex;
+            justify-content: space-between;
+        }
+        .experience_description {
+            color: #F7F7F7;
+            font-family: Roboto,sans-serif;
+            padding: 0vh 4vw;
+            font-size: 14px;
+            line-height: 20px;
+            width: fit-content;
+            height: fit-content;
+        }
+        .cred {
+            position:absolute;
+            bottom: 0;
+            right: 0;
+            color:rgba(94, 94, 94, 0.692);
+        }
+
+        #community {
+            position: relative;
+            max-width: 100%;
+            width: 100%;
+            min-height: 107vh;
+            max-height: fit-content;
+        }
+        .community_box{
+            margin: auto;
+            max-width: 100%;
+            width: 100%;
+            top: 29vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 2fr;
+        }
+        .community_name {
+            position: relative;
+            border: 2px solid white;
+            background-color: #F7F7F7;
+            background-image: radial-gradient(white, #f1f0f0);
+            height: 35vh;
+        }
+        .overlay1 {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: inherit;
+            width: inherit;
+            transition: .3s ease;  
+            background-color: #fd9a9a;
+            opacity: 0;
+        }
+        .overlay2 {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: inherit;
+            width: inherit;
+            transition: .3s ease;
+            background-color: #6ad3c8;
+            opacity: 0;
+        }
+        .community_name:hover .overlay1{
+            opacity: 0.98;
+        }
+        .community_name:hover .overlay2{
+            opacity: 0.98;
+        }
+        .community_image {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            filter: drop-shadow(0px 0px 40px #ffffff);
+        }
+        .community_description1 {
+            text-align: center;
+            color: white;
+            font-family: "Raleway", sans-serif;
+            font-size: 20px;
+            text-shadow: 3px 2px 5px #27272798;
+            padding-top: 4vh;
+        }
+        .community_description2 {
+            text-align: center;
+            color: white;
+            font-family: "Raleway", sans-serif;
+            font-size: 17px;
+            padding-top: 1vh;
+        }
+        .community_description3 {
+            text-align: left;
+            color: #faf9f9;
+            font-family: Roboto,sans-serif;
+            font-size: 15px;
+            padding: 3vw;
+            padding-top: 3vh;
+        }
+        .community_description4 {
+            text-align: left;
+            color: #faf9f9;
+            font-family: Roboto,sans-serif;
+            font-size: 13px;
+            padding:2vw;
+            padding-top:1vh;
+        }
+        
+        @media only screen and (max-width: 1160px) {
+            .community_description3 {
+                font-size: 13px;
+            }     
+        }
+        @media only screen and (max-width: 1160px) {
+            .community_description4 {
+                font-size: 12px;
+            }     
+        }
+
+        #projects {
+            position: relative;
+            max-width: 100vw;
+            width: 100%;
+            height: 97vh;
+            background-color: #F7F7F7;
+        }
+        .adventure {
+            position: absolute;
+            max-width: 100vw;
+            width: 100%;
+            height: 97vh;
+            background-image: url("img/adventure.jpg");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            filter:brightness(140%) opacity(20%) sepia(40%);
+        }
+        .projects_filter {
+            position: absolute;
+            max-width: 100%;
+            width: 100vw;
+            min-height: 105vh;
+            max-height: fit-content;
+            background-color: #484c5ada;
+        }
+        .projects_description {
+            top: 20%;
+            position: relative;
+            text-align: center;
+            letter-spacing: 4px;
+            line-height: 5vh;
+            font-family: "Raleway",sans-serif;
+            font-size: 4vh;
+            color: #F7F7F7;
+            border: 3px solid #a89d9d;
+            margin-left: 20vw;
+            margin-right: 20vw;
+            padding-top: 6vh;
+            padding-bottom: 6vh;
+            padding-left: 2vw;
+            padding-right: 2vw;
+            background-color: #00000066;
+        }
+
+        #contact {
+            position: relative;
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            /*background-image: linear-gradient(to bottom right, #a6ef81eb, #d5fffb, #ffeeff, #ffe3e3, #ffffdf);*/
+            background-color: #F7F7F7;
+        }
+        .contact_description {
+            text-align: center;
+            color: #918c8c;
+            font-family: "Raleway",sans-serif;
+            font-size: 24px;
+            line-height: 28px;
+            margin: auto;
+            padding: 8vh 8vw;
+            padding-bottom: 6vh;
+            letter-spacing: 1.5px;
+        }
+        .contact_box {
+            text-align: center;
+        }
+        .contact_options {
+            position: inherit;
+            width: 35px;
+            margin-right: 2vw;
+            margin-left: 2vw;
+            filter: drop-shadow(0.5px 0.5px 20px #f9f9e6);
+        }
+        .tinycopyright {
+            text-align: center;
+            color: #918c8c;
+        }
+
+
+        @media only screen and (max-width: 1024px) {
+            #about-container {
+                flex-direction: column;
+                margin: 5em;
+            }
+            #about-container-right {
+                margin-top: 3em;
+                margin-left: unset;
+                text-align: center;
+            }
+            .education_container {
+                flex-direction: column;
+                margin: 5em;
+                margin-top: 2em;
+            }
+            .education_container_left {
+                margin: auto;
+            }
+            .education_text {
+                margin-top: 3em;
+                margin-left: unset;
+            }
+        }
+
+        @media only screen and (min-width: 1024px) {
+            #about-container {
+                margin: 10em;
+            }
+            .education_container {
+                margin: 2em;
+                margin-left: 9em;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .profile_pic{
+                max-width: 11em;
+                height: auto;
+            }
+            .education_container {
+                margin: 2em;
+            }
+            .cu_pic {
+                max-width: 13em;
+                height: 12em;
+            }
+        }
+
+        @media only screen and (max-width: 1024px) {
+            .community_box {
+                grid-template-columns: 1fr;
+                grid-template-rows: 6fr;
+            }
+            .picture {
+                width: 40vw;
+            }
+            .pink {
+                width: 40vw;
+            }
+            .text {
+                left: 31vw;
+            }
+            .education_container {
+                flex-direction: column;
+            } 
+            .experience_box {
+                max-width: 75%;
+                width: 75vw;
+            }
+            .experience_description {
+                padding: 0vh 6vw;
+            }
+            .community_description3 {
+                font-size: 16px;
+                padding-left: 6vw;
+                padding-right: 4vw;
+            }
+            .community_description4 {
+                font-size: 14px;
+                padding-left: 6vw;
+                padding-right: 4vw;
+                padding-top: 3vh;
+            }
+        }
+
+        @media only screen and (max-width: 414px) {
+            .community_description3 {
+                font-size: 14px;
+            }
+            .community_description4 {
+                font-size: 13px;
+            }
+        }
+    </style>
+
+</head>
+
+<!--#preloader-->
+
+<body>
+
+    <!--Navigation-->
+    <div id="navbar">
+        <div id="container" onclick="menuFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div id="options">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div id="navbar-right">
+            <a target="_blank" href="mailto:tiffanygklau@gmail.com" style=all:unset><img id="icon" src="img/envelope.svg" alt="email" href="https://www.google.com"></img></a>
+            <a target="_blank" href="https://www.linkedin.com/in/tiffany-gk-lau" style=all:unset><img id="icon" src="img/linkedin-in.svg" alt="linkedin"></img></a>
+            <a target="_blank" href="https://github.com/TiffLau" style=all:unset><img id="icon" src="img/github.svg" alt="github"></img></a>
+            <a target="_blank" href="" style=all:unset;><img id="icon" src="img/file.svg" alt="resume" style=width:1.7vw;></img></a>
+        </div>
+    </div>
+
+    <!--Main-->
+    <div id="home">
+
+        <div class="green"></div>
+        <div class="beige" id="beige"></div>
+        <div class="pink">
+            <div class="text">
+                <p>Portfolio 2020</p>
+            </div>
+        </div>
+        <img class="picture" src="img/back_img.jpg"></img>
+        <div class="name_box">
+            <div class="paint"></div>
+            <div class="name">Tiffany<br>Lau</div>
+        </div>
+    </div>
+
+    <!--About-->
+    <div id="about">
+        <div id="about-container">
+            <img src="img/profilepic.jpg" alt="profile_picture" class="profile_pic"></img>
+            <div id="about-container-right">
+                <p class="about_title">HEY THERE! I'M <b style="color:#fd9a9a">TIFFANY</b>!</p> <br><br>
+                <p class="about_description">
+                    Welcome to my personal website, and thanks for stopping by!<br><br>
+                    I'm a second-year <b style="color:#a80024">computer science</b> student, specializing in <b style="color:#a80024">software engineering</b>, 
+                    with a great <b style="color:#a80024">love</b> of learning & a burning <b style="color:#a80024">passion</b> for making positive social impacts! <br><br>
+                </p>
+                <p class="about_motto">
+                    I enjoy creating solutions to everyday problems, I care to take on challenges that provide others with opportunities & I aspire to work on projects that contribute to our communities!
+                </p>
+
+                <!--div class="about_links">
+                    <a href="#education" style="color:#616161;"><div class="about_box">
+                        <img class="about_box_transition" src="img/university.svg" alt="education">
+                        <p>Education</p>
+                    </div></a>
+                    <a href="#experience" style="color:#616161;"><div class="about_box" style="left:17vw">
+                        <img class="about_box_transition" src="img/laptop-code.svg" alt="experience">
+                        <p>Experience</p>
+                    </div></a>
+                    <a href="#community" style="color:#616161;"><div class="about_box" style="left:35vw">
+                        <img class="about_box_transition" src="img/hand-holding-heart.svg" alt="community">
+                        <p>Community</p>
+                    </div></a>
+                </div-->
+            </div>
+        </div>
+    </div>
+
+    <!--Fun Fact-->
+    <div class="funfacts">
+        <p class="funfacts_description">Fun Fact: I can speak 4 languages! English, French, Cantonese, and Mandarin!</p>
+    </div>
+
+    <!--Education-->
+    <div id="education">
+        <div class="title">
+            <h2><span style="color: #fd9a9a">&#8226</span> MY EDUCATION <span style="color: #fd9a9a">&#8226</span></h2>
+            <i style="letter-spacing:1px;color:#616161;">~ Growing skillsets ~</i>
+        </div>
+        <div class="education_container"> 
+            <div class="education_container_left">
+                <a target="_blank" href="https://web.archive.org/web/20161012055416/http://www.panoramio.com/photo/10703187"><img class="cu_pic" alt="Carleton University Photo taken by Nismonick (no changes made, license linked)" src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Carleton_University_-_panoramio.jpg"></img></a>
+            </div>
+            <div class="education_text">
+                <a target="_blank" href="https://carleton.ca/"><p class="education_title">Carleton University</p></a><br>
+                <p class="education_text_inner"><b style="color:#a80024">Timeline: </b>September 2018 - April 2023 (estimated)</p><br>
+                <hr style="text-align:left;"><br>
+                <a target="_blank" href="https://carleton.ca/scs/"><p class="education_text_inner"><b style="color:#a80024">Program: </b>Bachelor of Computer Science, concentration in Software Engineering</p></a><br>
+                <hr style="text-align:left;"><br>
+                <div style="display: flex;">
+                    <div class="education_text_inner"><b style="color:#a80024"><a target="_blank" href="https://calendar.carleton.ca/undergrad/courses/COMP/">Courses:</a></b></div>
+                    <div class="education_text_inner" style="margin-left:25px;">
+                        <ul>
+                            <li>
+                                COMP 1805 - Discrete Structures I
+                            </li>
+                            <li>
+                                COMP 2804 - Discrete Structures II
+                            </li>
+                            <li>
+                                COMP 1405 - Introduction to Computer Science I
+                            </li>
+                            <li>
+                                COMP 1406 - Introduction to Computer Science II
+                            </li>
+                            <li>
+                                COMP 2402 - Abstract Data Types and Algorithms
+                            </li>
+                            <li>
+                                COMP 2401 - Introduction to Systems Programming
+                            </li>
+                            <li>
+                                COMP 2404 - Introduction to Software Engineering
+                            </li>
+                            <li>
+                                COMP 2406 - Fundamentals of Web Applications
+                            </li>
+                            <li>
+                                COMP 3005 - Database Management Systems
+                            </li>
+                        </ul>
+                    </div>
+                </p></div><br>
+            </div>
+        </div>
+    </div>
+
+    <!--Fun Fact-->
+    <div class="funfacts">
+        <p class="funfacts_description">Fun Fact: I received my <a target="_blank" href="https://www.rcmusic.com/">Royal Conservatory of Music Level 10 Piano Certificate</a> in Grade 11 (after playing piano since I was 4 years old)!</p>
+    </div>
+
+    <!--Experience-->
+    <div id="experience">
+        <div class="office"></div>
+        <a target="_blank" href="https://www.freepik.com/free-photos-vectors/flower"><div class="cred">Flower photo created by osaba - www.freepik.com</div></a>
+        <div class="title">
+            <h2 style="color:#f9f9e6"><span style="color: #fd9a9a">&#8226</span> MY WORK EXPERIENCE <span style="color: #fd9a9a">&#8226</span></h2>
+            <i style="letter-spacing:1px;color:#F7F7F7;">~ Unforgettable moments ~</i>
+        </div>
+        <div class="experience_box">
+            <p class="experience_name"><a target="_blank" href="https://www.marchnetworks.com/"><span>MARCH NETWORKS CORPORATION</span></a><span>05/2020 - Present</span></p>
+            <p class="experience_name" style="color:#fd9a9a;">Integration Analyst</p>
+            <ul class="experience_description">
+                <li>
+                    Developing applications on-demand using different APIs and internal SDKs to transform video into usable business
+                    intelligence, and provide customers worldwide with these tools to enhance security, mitigate risk, and reduce losses from theft and fraud
+                </li>
+                <li>
+                    Will be creating test apps to demonstrate the ability of third party application and hardware
+                </li>
+            </ul><br><hr class="hr_style"><br>
+
+            <p class="experience_name"><a target="_blank" href="https://www.canada.ca/en/employment-social-development.html"><span>EMPLOYMENT AND SOCIAL DEVELOPMENT CANADA</span></a><span>06/2019 - 04/2020</span></p>
+            <p class="experience_name" style="color:#fd9a9a;">Software Developer</span>
+            <ul class="experience_description">
+                <li>
+                    Developed, tested, and deployed a library using C# and .NET for an internal file threat detection web service currently in production
+                </li>
+                <li>
+                    Designed and implemented a REST API that adhered to the needs of the client to improve the overall user accessibility
+                </li>
+                <li>
+                    Wrote and designed unit tests to troubleshoot issues while facilitating the advancement of the web service project development
+                </li>
+                <li>
+                    Demonstrated excellent collaboration skills working as a team member along with programmer analysts and manager
+                </li>
+            </ul><br><hr class="hr_style"><br>
+
+            <p class="experience_name"><a target="_blank" href="https://www.kumon.com/ottawa-centrepointe-on"><span>KUMON MATH & READING CENTRE</span></a><span>06/2019 - 04/2020</span></p>
+            <p class="experience_name" style="color:#fd9a9a;">Teaching Assistant</span>
+            <ul class="experience_description">
+                <li>
+                    Adapted teaching strategies to meet the individual needs of over 200 students, ranging from primary learners to advanced levels, and taught them English and mathematical concepts
+                </li>
+                <li>
+                    Conducted additional responsibilities as needed, resulting in the strong ability to work in a dynamic environment
+                </li>
+            </ul>
+        </div>
+        <br><br><br>
+    </div>
+
+    <!--Fun Fact-->
+    <div class="funfacts">
+        <p class="funfacts_description">Fun Fact: I know how to play the <a target="_blank" href="https://en.wikipedia.org/wiki/Guzheng">guzheng (a plucked string instrument with more than 2,500-year history)</a>!</p>
+    </div>
+
+    <!--Community-->
+    <div id="community">
+        <div class="title">
+            <h2><span style="color: #fd9a9a">&#8226</span> MY COMMUNITY INVOLVEMENT <span style="color: #fd9a9a">&#8226</span></h2>
+            <i style="letter-spacing:1px;color:#616161;">~ Shaping who I am ~</i>
+        </div>
+        <div class="community_box">
+            <div class="community_name">
+                <img class="community_image" alt="CCSS Logo" style="max-width: 28vw;" src="img/ccss.png"></img>
+                <a target="_blank" href="https://ccss.carleton.ca/"><div class="overlay1">
+                    <p class="community_description1">Carleton Computer Science Society</p>
+                    <p class="community_description2">Director of Social (2019-20) / Inclusion (2020-21)</p>
+                    <ul class="community_description3">
+                        <li>
+                            Create opportunities and resources geared towards more than 2500 computer science students, and engage these students in social and academic activities
+                        </li>
+                        <li>
+                            Strive to foster a warm, welcoming environment and a strong sense of community among computer science students
+                        </li>
+                    </ul>
+                </div></a>
+            </div>
+            <div class="community_name">
+                <img class="community_image" alt="WiCS Logo" style="max-width: 26vw;" src="img/wics.png"></img>
+                <a target="_blank" href="https://wics.scs.carleton.ca/"><div class="overlay2">
+                    <p class="community_description1">Carleton Women in Computer Science</p>
+                    <p class="community_description2">Executive Member</p>
+                    <ul class="community_description3">
+                        <li>
+                            Endeavour to establish a positive environment for women in computing at all academic levels, where diversity in the computer science community is encouraged and supported
+                        </li>
+                        <li>
+                            Organize various events to help build a strong network of women in computer science
+                        </li>
+                    </ul>
+                </div></a>
+            </div>
+            <div class="community_name">
+                <img class="community_image" alt="HCPP Logo" src="img/hcpp(1).png"></img>
+                <a target="_blank" href="https://heartofthecityottawa.weebly.com/"><div class="overlay1">
+                    <p class="community_description1">Heart of the City Piano Program</p>
+                    <p class="community_description2">Director</p>
+                    <ul class="community_description3">  
+                        <li>
+                            Oversee a city-wide piano program that provides more than 60 economically disadvantaged children with the opportunity to discover music through piano lessons, given at their schools, by volunteers in the community
+                        </li>
+                        <li>
+                            HCPP not only teaches the students an instrument, but it also teaches them a means of self-expression, communication, and instills self-confidence
+                        </li>
+                    </ul>
+                </div></a>
+            </div>
+            <div class="community_name">
+                <img class="community_image" alt="Carleton University Logo" style="max-width: 28vw;" src="img/notetaker.png"></img>
+                <a target="_blank" href="https://carleton.ca/pmc/opportunities-at-pmc/notetaking/"><div class="overlay2">
+                    <p class="community_description1">Carleton University PMC</p>
+                    <p class="community_description2">Volunteer Notetaker</p>
+                    <ul class="community_description3">
+                        <li>
+                            Volunteered as a Classroom Notetaker at the Paul Menton Centre for Students with Disabilities to provide supplemental lecture notes for students with various disabilities
+                        </li>
+                        <li>
+                            Responsible for attending every lecture, taking detailed and organized notes, and providing the Notetaking Service with the notes within a 48-hour deadline
+                        </li>
+                    </ul>
+                </div></a>
+            </div>
+            <div class="community_name">
+                <img class="community_image" alt="CHEO Logo" src="img/cheo.png"></img>
+                <a target="_blank" href="https://www.cheo.on.ca/en/index.aspx"><div class="overlay1">
+                    <p class="community_description1">Children's Hospital of Eastern Ontario</p>
+                    <p class="community_description2">Front Desk Assistant</p>
+                    <ul class="community_description3">
+                        <li>
+                            Assist hospital staffs in providing care and service in an accessible manner, while demontrating the core principles of patient and family-centred care: respect, communication, collaboration/partnership, and support
+                        </li>
+                    </ul>
+                </div></a>
+            </div>
+            <div class="community_name">
+                <img class="community_image" alt="Key Club Logo" style="max-width: 13vw;" src="img/keyclub.png"></img>
+                <a target="_blank" href="https://www.keyclub.org/"><div class="overlay2">
+                    <p class="community_description1">Key Club International</p>
+                    <p class="community_description2">President - Nepean High School</p>
+                    <ul class="community_description4">
+                        <li>
+                            Held an Indigo Love of Reading Book Drive and fundraised for Sleeping Children Around the World
+                        </li>
+                        <li>
+                            Organized a Battle of the Schools Food Drive between Nepean High School and Sir Robert Borden High School, raising awareness within the school community and collecting over 3000 food donations to support Parkdale Food Centre and Morrison Gardens Community House
+                        </li>
+                        <li>
+                            Coordinated NHS's 19th Annual Spaghetti Dinner, raising over $2000 for Cornerstone Housing for Women on Princeton Avenue to help support 45 women in need in our community
+                        </li>
+                    </ul>
+                </div></a>
+            </div>
+        </div>
+    </div>
+
+    <!--Fun Fact-->
+    <div class="funfacts">
+        <p class="funfacts_description">Fun Fact: I love crocheting cute little stuffed animals during down-times! I've even made a few Hello Kitty ones before!</p>
+    </div>
+
+    <!--Projects-->
+    <div id="projects">
+        <div class="projects_filter"></div>
+        <img class="adventure"></img>
+        <div class="title">
+            <h2 style="color:#f9f9e6"><span style="color: #fd9a9a">&#8226</span> MY PROJECTS <span style="color: #fd9a9a">&#8226</span></h2>
+            <i style="letter-spacing:1px;color:#F7F7F7;">~ Ongoing creations ~</i>
+        </div>
+        <p class="projects_description">BEING UPDATED &#8226 STAY TUNED!</p>
+    </div>
+
+    <!--Fun Fact-->
+    <div class="funfacts">
+        <p class="funfacts_description">Fun Fact: Although I'm not too, too good at it, I love horseback riding!</p>
+    </div>
+
+    <!--Contact-->
+    <div id="contact">
+        <p class="contact_description">
+            That was a little glimpse into my life!<br><br>I'd love to chat about anything & everything, so feel free to reach out! :)
+        </p>
+        <div class="contact_box">
+            <a target="_blank" href="mailto:tiffanygklau@gmail.com" style=all:unset><img class="contact_options" src="img/envelope.svg" alt="email" href="https://www.google.com"></img></a>
+            <a target="_blank" href="https://www.linkedin.com/in/tiffany-gk-lau" style=all:unset><img class="contact_options" src="img/linkedin-in.svg" alt="linkedin"></img></a>
+            <a target="_blank" href="https://github.com/TiffLau" style=all:unset><img class="contact_options" src="img/github.svg" alt="github"></img></a>
+            <a target="_blank" href="" style=all:unset;><img class="contact_options" src="img/file.svg" alt="resume" style=width:24px;></img></a>
+        </div><br><br>
+        <p class="tinycopyright">
+            &copy by Tiffany Lau. Last updated in May 2020.
+        </p><br>
+    </div>
+
+
+    <!--Scripts-->
+    <script src="tiffany.js"></script>
+
+    <script>
+        function menuFunction(x) {
+            x.classList.toggle("change");
+            if (document.getElementById("options").style.display == "inline-block"){
+                document.getElementById("options").style.display = "none";
+                document.getElementById("navbar-right").style.display = "none";
+                //documnet.getElementById("icon").filter = "drop-shadow(0.5px 0.5px 0.9px #f9f9e6)";
+            } else {
+                document.getElementById("options").style.display = "inline-block";
+                document.getElementById("navbar-right").style.display = "inline-block";
+            }
+            
+        }
+        
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 90 || document.documentElement.scrollTop > 90) {
+            document.getElementById("navbar").style.paddingTop = "3.5vh";
+            document.getElementById("navbar").style.height = "7vh";
+            document.getElementById("navbar").style.paddingBottom = "0vh";
+            document.getElementById("navbar").style.backgroundColor = "#484c5a";
+            document.getElementById("navbar").style.opacity = 0.98;
+            document.getElementById("navbar").style.boxShadow = "0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030";            
+          } else {
+            document.getElementById("navbar").style.top = "0";
+            document.getElementById("navbar").style.backgroundColor = "transparent";
+            document.getElementById("navbar").style.padding = "5vh 2vw";
+            document.getElementById("navbar").style.boxShadow = "unset";
+          }
+        }
+    </script>
+
+</body>
+</html>
