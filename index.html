@@ -52,17 +52,29 @@
         }
 
         #navbar {
+            display: flex;
+            flex-direction: row;
             position: fixed;
-            width: 97%;
-            height: 8vh;
-            display: block;
+            width: 100%;
+            height: 4vh;
             transition: 0.3s;
             z-index: 14;
-            padding: 5vh 2vw;
+            padding-top: 5vh;
+            padding-bottom: 5vh;
+        }
+        #container {
+            display: flex;
+            cursor: pointer;
+            margin-left: 3vw;
+            height: fit-content;
+        }
+        #options {
+            display: none;
+            height: fit-content;
+            margin-left: 3vw;
         }
         #navbar a{
             float: left;
-            display: block;
             color: #f9f9e6;
             text-align: right;
             margin-left: 3.4vw;
@@ -72,24 +84,25 @@
             z-index: 14;
             text-shadow: 3px 2px 9px #00000098;
             font-family: "Raleway",sans-serif;
-
-            /* position: relative;
-            top: 100%;
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%); */
-        }
-        #options {
-            display: none;
-            position: relative;
+            line-height: 30px;
         }
         #navbar-right {
-            float: right;
+            margin-left: auto;
             display: none;
-            position: relative;
         }
         .icon{
-            font-size: 2.5vw;
+            font-size: 2vw;
             text-align: center;
+            margin-right: 1.5vw;
+            margin-left: 1.5vw;
+            z-index: 15;
+            cursor: pointer;
+            float: left;
+        }
+        .icon1{
+            font-size: 1.7vw;
+            text-align: center;
+            margin-top: 0.4vh;
             margin-right: 1.5vw;
             margin-left: 1.5vw;
             z-index: 15;
@@ -99,13 +112,6 @@
         #navbar a:hover {
             text-decoration: underline overline;
             z-index: 15;
-        }
-
-        #container {
-            display: inline-block;
-            cursor: pointer;
-            position: relative;
-            margin-right: 3vw;
         }
         .bar1, .bar2, .bar3 {
             width: 2vw;
@@ -601,6 +607,27 @@
 
 
         @media only screen and (max-width: 1024px) {
+            #navbar a {
+                font-size: 20px;
+            }
+            .icon {
+                font-size: 25px;
+            }
+            .icon1 {
+                font-size: 22px;
+            }
+            .bar1 {
+                width: 28px;
+                height: 3px;
+            }
+            .bar2 {
+                width: 28px;
+                height: 3px;
+            }
+            .bar3 {
+                width: 28px;
+                height: 3px;
+            }
             #about-container {
                 flex-direction: column;
                 margin: 5em;
@@ -703,19 +730,21 @@
 
     <!--Navigation-->
     <div id="navbar">
-        <div id="container" onclick="menuFunction(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
-        <div id="options">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+        <div id="container">
+            <div onclick="menuFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div id="options">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
         </div>
         <div id="navbar-right">
-            <a target="_blank" href="mailto:tiffanygklau@gmail.com" style=all:unset><div class="icon" style="font-size:2.1vw;margin-top:0.4vh"><i class="fa fa-envelope"></i></div></a>
+            <a target="_blank" href="mailto:tiffanygklau@gmail.com" style=all:unset><div class="icon1"><i class="fa fa-envelope"></i></div></a>
             <a target="_blank" href="https://www.linkedin.com/in/tiffany-gk-lau" style=all:unset><div class="icon"><i class="fa fa-linkedin"></i></div></a>
             <a target="_blank" href="https://github.com/TiffLau" style=all:unset><div class="icon"><i class="fa fa-github"></i></div></a>
         </div>
@@ -1049,23 +1078,23 @@
         
         function scrollFunction() {
           if (document.body.scrollTop > 90 || document.documentElement.scrollTop > 90) {
-            document.getElementById("navbar").style.paddingTop = "3.5vh";
-            document.getElementById("navbar").style.height = "7vh";
-            document.getElementById("navbar").style.paddingBottom = "0vh";
+            document.getElementById("navbar").style.height = "fit-content";
             document.getElementById("navbar").style.backgroundColor = "#484c5a";
             document.getElementById("navbar").style.opacity = 0.98;
             document.getElementById("navbar").style.boxShadow = "0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030";  
+            document.getElementById("navbar").style.paddingTop = "4vh";
+            document.getElementById("navbar").style.paddingBottom = "3vh";
+            document.getElementsByClassName("icon1")[0].style.color = "#f9f9e6";  
             document.getElementsByClassName("icon")[0].style.color = "#f9f9e6";  
-            document.getElementsByClassName("icon")[1].style.color = "#f9f9e6";  
-            document.getElementsByClassName("icon")[2].style.color = "#f9f9e6"; 
+            document.getElementsByClassName("icon")[1].style.color = "#f9f9e6"; 
           } else {
-            document.getElementById("navbar").style.top = "0";
             document.getElementById("navbar").style.backgroundColor = "transparent";
-            document.getElementById("navbar").style.padding = "5vh 2vw";
             document.getElementById("navbar").style.boxShadow = "unset";
+            document.getElementById("navbar").style.paddingTop = "5vh";
+            document.getElementById("navbar").style.paddingBottom = "5vh";
+            document.getElementsByClassName("icon1")[0].style.color = "black";  
             document.getElementsByClassName("icon")[0].style.color = "black";  
-            document.getElementsByClassName("icon")[1].style.color = "black";  
-            document.getElementsByClassName("icon")[2].style.color = "black";
+            document.getElementsByClassName("icon")[1].style.color = "black";
           }
         }
     </script>
