@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     
-    <!--favicon doesn't work on safari.. tears..-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
@@ -87,14 +87,14 @@
             display: none;
             position: relative;
         }
-        #navbar-right img{
-            width: 2.2vw;
+        .icon{
+            font-size: 2.5vw;
             text-align: center;
-            margin-right: 1.2vw;
-            margin-left: 1.2vw;
+            margin-right: 1.5vw;
+            margin-left: 1.5vw;
             z-index: 15;
             cursor: pointer;
-            filter: drop-shadow(0.5px 0.5px 20px #f9f9e6);
+            float: left;
         }
         #navbar a:hover {
             text-decoration: underline overline;
@@ -140,7 +140,6 @@
         }
         .green {
             background-color: #a6ef81d3;
-            max-width: 60%;
             width: 60vw;
             height: 100vh;
             position: absolute;
@@ -148,7 +147,6 @@
         }
         .beige {
             background-color: #f9f9e6;
-            max-width: 40%;
             width: 40vw;
             height: 100vh;
             position: absolute;
@@ -270,16 +268,14 @@
             color:#616161;
             line-height:23px;
         }
-        /* Fix the transitions for the boxes/buttons */
         .about_links {
-            position: absolute;
-            max-width: 50%;
-            top: 55vh;
-            left: 42vw;
             font-family: "Raleway", sans-serif;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top: 3em;
         }
         .about_box {
-            position: absolute;
             border: 1px solid #dddddd;
             padding: 3vh;
             padding-left: 4vw;
@@ -288,13 +284,10 @@
         .about_box:hover{
             border: 1px solid #fd9a9a;
         }
-        .about_box_transition {
-            margin-left:20px;
-            margin-right:20px;
-            margin-bottom:10px;
-        }
-        .about_box_transition:hover{
-            top:0px;
+        .about_box_inner {
+            text-align: center;
+            margin-bottom:15px;
+            font-size: 30px;
         }
 
         .title {
@@ -326,7 +319,9 @@
             display:flex;
             flex-direction: row;
             max-height: fit-content;
-            margin: auto;
+            margin:auto;
+            margin-top: 2em;
+            margin-bottom: 3em;
         }
         .education_container_left {
             height: fit-content;
@@ -341,7 +336,7 @@
         }
         .education_text {
             height: fit-content;
-            margin-left: 5.4em;
+            margin-left: 7em;
             font-family: "Raleway", sans-serif;
         }
         .education_title {
@@ -581,12 +576,23 @@
         .contact_box {
             text-align: center;
         }
-        .contact_options {
-            position: inherit;
-            width: 35px;
-            margin-right: 2vw;
-            margin-left: 2vw;
-            filter: drop-shadow(0.5px 0.5px 20px #f9f9e6);
+        .contact_options{
+            display: inline;
+            text-align: center;
+            font-size: 45px;
+            margin: auto;
+            margin-right: 25px;
+            margin-left: 25px;
+            cursor: pointer;
+        }
+        .contact_options1 {
+            display: inline;
+            text-align: center;
+            font-size: 40px;
+            margin: auto;
+            margin-right: 30px;
+            margin-left: 25px;
+            cursor: pointer;
         }
         .tinycopyright {
             text-align: center;
@@ -603,6 +609,9 @@
                 margin-top: 3em;
                 margin-left: unset;
                 text-align: center;
+            }
+            .about_links {
+                flex-direction: column;
             }
             .education_container {
                 flex-direction: column;
@@ -621,10 +630,7 @@
         @media only screen and (min-width: 1024px) {
             #about-container {
                 margin: 10em;
-            }
-            .education_container {
-                margin: 2em;
-                margin-left: 9em;
+                margin-bottom: 7em;
             }
         }
 
@@ -709,10 +715,9 @@
             <a href="#contact">Contact</a>
         </div>
         <div id="navbar-right">
-            <a target="_blank" href="mailto:tiffanygklau@gmail.com" style=all:unset><img id="icon" src="img/envelope.svg" alt="email" href="https://www.google.com"></img></a>
-            <a target="_blank" href="https://www.linkedin.com/in/tiffany-gk-lau" style=all:unset><img id="icon" src="img/linkedin-in.svg" alt="linkedin"></img></a>
-            <a target="_blank" href="https://github.com/TiffLau" style=all:unset><img id="icon" src="img/github.svg" alt="github"></img></a>
-            <a target="_blank" href="" style=all:unset;><img id="icon" src="img/file.svg" alt="resume" style=width:1.7vw;></img></a>
+            <a target="_blank" href="mailto:tiffanygklau@gmail.com" style=all:unset><div class="icon" style="font-size:2.1vw;margin-top:0.4vh"><i class="fa fa-envelope"></i></div></a>
+            <a target="_blank" href="https://www.linkedin.com/in/tiffany-gk-lau" style=all:unset><div class="icon"><i class="fa fa-linkedin"></i></div></a>
+            <a target="_blank" href="https://github.com/TiffLau" style=all:unset><div class="icon"><i class="fa fa-github"></i></div></a>
         </div>
     </div>
 
@@ -748,20 +753,20 @@
                     I enjoy creating solutions to everyday problems, I care to take on challenges that provide others with opportunities & I aspire to work on projects that contribute to our communities!
                 </p>
 
-                <!--div class="about_links">
+                <div class="about_links">
                     <a href="#education" style="color:#616161;"><div class="about_box">
-                        <img class="about_box_transition" src="img/university.svg" alt="education">
+                        <div class="about_box_inner"><i class="fa fa-university"></i></div>
                         <p>Education</p>
                     </div></a>
-                    <a href="#experience" style="color:#616161;"><div class="about_box" style="left:17vw">
-                        <img class="about_box_transition" src="img/laptop-code.svg" alt="experience">
+                    <a href="#experience" style="color:#616161;"><div class="about_box">
+                        <div class="about_box_inner"><i class="fa fa-laptop"></i></div>
                         <p>Experience</p>
                     </div></a>
-                    <a href="#community" style="color:#616161;"><div class="about_box" style="left:35vw">
-                        <img class="about_box_transition" src="img/hand-holding-heart.svg" alt="community">
+                    <a href="#community" style="color:#616161;"><div class="about_box">
+                        <div class="about_box_inner"><i class="fa fa-heart-o"></i></div>
                         <p>Community</p>
                     </div></a>
-                </div-->
+                </div>
             </div>
         </div>
     </div>
@@ -827,7 +832,7 @@
 
     <!--Fun Fact-->
     <div class="funfacts">
-        <p class="funfacts_description">Fun Fact: I received my <a target="_blank" href="https://www.rcmusic.com/">Royal Conservatory of Music Level 10 Piano Certificate</a> in Grade 11 (after playing piano since I was 4 years old)!</p>
+        <p class="funfacts_description">Fun Fact: I received my <a target="_blank" href="https://www.rcmusic.com/">Royal Conservatory of Music Level 10 Piano Certificate</a> in Grade 11 (been playing piano since I was 4 years old)!</p>
     </div>
 
     <!--Experience-->
@@ -843,11 +848,10 @@
             <p class="experience_name" style="color:#fd9a9a;">Integration Analyst</p>
             <ul class="experience_description">
                 <li>
-                    Developing applications on-demand using different APIs and internal SDKs to transform video into usable business
-                    intelligence, and provide customers worldwide with these tools to enhance security, mitigate risk, and reduce losses from theft and fraud
+                    Will develop applications on-demand using C#, ASP.NET, and different APIs and internal SDKs to transform video into usable business intelligence and enhance customer security worldwide
                 </li>
                 <li>
-                    Will be creating test apps to demonstrate the ability of third party application and hardware
+                    Will be creating test apps to demonstrate the ability of third-party application and hardware while reporting on the results of potential integrations
                 </li>
             </ul><br><hr class="hr_style"><br>
 
@@ -1005,7 +1009,7 @@
 
     <!--Fun Fact-->
     <div class="funfacts">
-        <p class="funfacts_description">Fun Fact: Although I'm not too, too good at it, I love horseback riding!</p>
+        <p class="funfacts_description">Fun Fact: Although I'm not too good at it, I love horseback riding!</p>
     </div>
 
     <!--Contact-->
@@ -1014,10 +1018,9 @@
             That was a little glimpse into my life!<br><br>I'd love to chat about anything & everything, so feel free to reach out! :)
         </p>
         <div class="contact_box">
-            <a target="_blank" href="mailto:tiffanygklau@gmail.com" style=all:unset><img class="contact_options" src="img/envelope.svg" alt="email" href="https://www.google.com"></img></a>
-            <a target="_blank" href="https://www.linkedin.com/in/tiffany-gk-lau" style=all:unset><img class="contact_options" src="img/linkedin-in.svg" alt="linkedin"></img></a>
-            <a target="_blank" href="https://github.com/TiffLau" style=all:unset><img class="contact_options" src="img/github.svg" alt="github"></img></a>
-            <a target="_blank" href="" style=all:unset;><img class="contact_options" src="img/file.svg" alt="resume" style=width:24px;></img></a>
+            <a target="_blank" href="mailto:tiffanygklau@gmail.com" style=all:unset><div class="contact_options1"><i class="fa fa-envelope"></i></div></a>
+            <a target="_blank" href="https://www.linkedin.com/in/tiffany-gk-lau" style=all:unset><div class="contact_options"><i class="fa fa-linkedin"></i></div></a>
+            <a target="_blank" href="https://github.com/TiffLau" style=all:unset><div class="contact_options"><i class="fa fa-github"></i></div></a>
         </div><br><br>
         <p class="tinycopyright">
             &copy by Tiffany Lau. Last updated in May 2020.
@@ -1051,12 +1054,18 @@
             document.getElementById("navbar").style.paddingBottom = "0vh";
             document.getElementById("navbar").style.backgroundColor = "#484c5a";
             document.getElementById("navbar").style.opacity = 0.98;
-            document.getElementById("navbar").style.boxShadow = "0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030";            
+            document.getElementById("navbar").style.boxShadow = "0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030";  
+            document.getElementsByClassName("icon")[0].style.color = "#f9f9e6";  
+            document.getElementsByClassName("icon")[1].style.color = "#f9f9e6";  
+            document.getElementsByClassName("icon")[2].style.color = "#f9f9e6"; 
           } else {
             document.getElementById("navbar").style.top = "0";
             document.getElementById("navbar").style.backgroundColor = "transparent";
             document.getElementById("navbar").style.padding = "5vh 2vw";
             document.getElementById("navbar").style.boxShadow = "unset";
+            document.getElementsByClassName("icon")[0].style.color = "black";  
+            document.getElementsByClassName("icon")[1].style.color = "black";  
+            document.getElementsByClassName("icon")[2].style.color = "black";
           }
         }
     </script>
