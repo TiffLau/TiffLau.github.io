@@ -338,7 +338,7 @@ canvas {
 .education_text_inner {
     color:#616161;
     font-family:Raleway,sans-serif;
-    line-height:3.2vh;
+    line-height:23px;
 }
 
 #experience {
@@ -365,17 +365,17 @@ canvas {
     height: fit-content;
     background-color: #000000b9;
     border: 3px solid #f1f1f1;
-    padding-top: 3vh;
-    padding-bottom: 3vh;
+    padding-top: 23px;
+    padding-bottom: 23px;
     margin: auto;
 }
 .experience_name  {
     color: #77d6cd;
     font-family: "Raleway", sans-serif;
     padding: 0vh 4vw;
-    padding-bottom: 1vh;
+    padding-bottom: 7px;
     letter-spacing: 0.15vh;
-    line-height: 3vh;
+    line-height: 22px;
     display: flex;
     justify-content: space-between;
 }
@@ -392,21 +392,21 @@ canvas {
     position:absolute;
     bottom: 0;
     right: 0;
-    color:rgba(94, 94, 94, 0.692);
+    color:rgba(94, 94, 94, 0.521);
 }
 
 #community {
     position: relative;
     max-width: 100%;
     width: 100%;
-    min-height: 107vh;
-    max-height: fit-content;
+    height: fit-content;
 }
 .community_box{
     margin: auto;
     max-width: 100%;
     width: 100%;
     top: 29vh;
+    padding-bottom: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 2fr;
@@ -416,7 +416,7 @@ canvas {
     border: 2px solid white;
     background-color: #F7F7F7;
     background-image: radial-gradient(white, #f1f0f0);
-    height: 35vh;
+    height: 257px;
 }
 .overlay1 {
     position: absolute;
@@ -462,14 +462,14 @@ canvas {
     font-family: "Raleway", sans-serif;
     font-size: 20px;
     text-shadow: 3px 2px 5px #27272798;
-    padding-top: 4vh;
+    padding-top: 30px;
 }
 .community_description2 {
     text-align: center;
     color: white;
     font-family: "Raleway", sans-serif;
     font-size: 17px;
-    padding-top: 1vh;
+    padding-top: 7.75px;
 }
 .community_description3 {
     text-align: left;
@@ -477,7 +477,7 @@ canvas {
     font-family: Roboto,sans-serif;
     font-size: 15px;
     padding: 3vw;
-    padding-top: 3vh;
+    padding-top: 23.22px;
 }
 .community_description4 {
     text-align: left;
@@ -485,7 +485,7 @@ canvas {
     font-family: Roboto,sans-serif;
     font-size: 13px;
     padding:2vw;
-    padding-top:1vh;
+    padding-top:7.75px;
 }
         
 @media only screen and (max-width: 1160px) {
@@ -529,15 +529,15 @@ canvas {
     position: relative;
     text-align: center;
     letter-spacing: 4px;
-    line-height: 5vh;
+    line-height: 38px;
     font-family: "Raleway",sans-serif;
-    font-size: 4vh;
+    font-size: 30px;
     color: #F7F7F7;
     border: 3px solid #F7F7F7;
     margin-left: 20vw;
     margin-right: 20vw;
-    padding-top: 6vh;
-    padding-bottom: 6vh;
+    padding-top: 44px;
+    padding-bottom: 44px;
     padding-left: 2vw;
     padding-right: 2vw;
     background-color: #00000066;
