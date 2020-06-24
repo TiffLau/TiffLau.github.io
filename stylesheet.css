@@ -207,6 +207,21 @@ a {
     top: 0; left: 0; bottom: 0; right: 0;
     height: fit-content;
 }
+.name-alt {
+    position: absolute;
+    font-size: 50px;
+    color: #f9f9e6;
+    background-color: #ffb8b8;
+    text-shadow: 5px 5px 5px #00000030;
+    text-align: center;
+    padding: 20px;
+    border: medium double black;
+    left: 50%;
+    top: 50%;
+    width: fit-content;
+    transform: translate(-50%, -50%);
+    display: none;
+}
 canvas {
     display: block;
     vertical-align: bottom;
@@ -676,6 +691,39 @@ canvas {
 }
 
 @media only screen and (max-width: 500px) {
+    #home {
+        position: relative;
+        max-width: 100%;
+        width: 100%;
+        height: 100vh;
+        background-image: url(https://i.imgur.com/x84vjst.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .name-alt {
+        display: inline;
+    }
+    .name {
+        display: none;
+    }
+    .beige {
+        display: none;
+    }
+    .green {
+        display: none;
+    }
+    .pink {
+        display: none;
+    }
+    .picture {
+        display: none;
+    }
+    .pink {
+        display: none;
+    }
+    .paint {
+        display: none;
+    }
     .profile_pic{
         max-width: 11em;
         height: auto;
