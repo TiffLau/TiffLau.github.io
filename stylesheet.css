@@ -15,6 +15,16 @@ a {
     color: unset;
 }
 
+.pink_text {
+    color: #fd9a9a;
+}
+.red_text {
+    color: #a80024;
+}
+.beige_text {
+    color: #f9f9e6;
+}
+
 .funfacts {
     position: relative;
     max-width: 100%;
@@ -284,6 +294,7 @@ canvas {
     padding: 3vh;
     padding-left: 4vw;
     padding-right: 4vw;
+    color: #616161;
 }
 .about_box:hover{
     border: 1px solid #fd9a9a;
@@ -304,6 +315,14 @@ canvas {
     font-family: "Raleway",sans-serif;
     color: #323232;
     z-index: 2;
+}
+.subtitle_light {
+    letter-spacing: 1px;
+    color: #F7F7F7;
+}
+.subtitle_dark {
+    letter-spacing: 1px;
+    color: #616161;
 }
 .hr_style {
     height:2px;
@@ -355,6 +374,12 @@ canvas {
     font-family:Raleway,sans-serif;
     line-height:23px;
 }
+.education_courses {
+    color:#616161;
+    font-family:Raleway,sans-serif;
+    line-height:23px;
+    margin-left: 25px;
+}
 
 #experience {
     position: relative;
@@ -386,6 +411,16 @@ canvas {
 }
 .experience_name  {
     color: #77d6cd;
+    font-family: "Raleway", sans-serif;
+    padding: 0vh 4vw;
+    padding-bottom: 7px;
+    letter-spacing: 0.15vh;
+    line-height: 22px;
+    display: flex;
+    justify-content: space-between;
+}
+.experience_sub_name {
+    color: #fd9a9a;
     font-family: "Raleway", sans-serif;
     padding: 0vh 4vw;
     padding-bottom: 7px;
@@ -467,6 +502,16 @@ canvas {
     position: relative;
     top: 50%;
     left: 50%;
+    max-width: 300px;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0px 0px 40px #ffffff);
+}
+.community_image1{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    max-width: 180px;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     filter: drop-shadow(0px 0px 40px #ffffff);
