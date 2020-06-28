@@ -350,47 +350,8 @@
         </p><br>
     </div>
 
-
     <!--Scripts-->
     <script src="tiffany.js"></script>
-
-    <script>
-        function menuFunction(x) {
-            x.classList.toggle("change");
-            if (document.getElementById("options").style.display == "inline-block"){
-                document.getElementById("options").style.display = "none";
-                document.getElementById("navbar-right").style.display = "none";
-            } else {
-                document.getElementById("options").style.display = "inline-block";
-                document.getElementById("navbar-right").style.display = "inline-block";
-            }
-            
-        }
-        
-        window.onscroll = function() {scrollFunction()};
-        
-        function scrollFunction() {
-          if (document.body.scrollTop > 95 || document.documentElement.scrollTop > 95) {
-            document.getElementById("navbar").style.height = "fit-content";
-            document.getElementById("navbar").style.backgroundColor = "#484c5a";
-            document.getElementById("navbar").style.opacity = 0.98;
-            document.getElementById("navbar").style.boxShadow = "0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030";  
-            document.getElementById("navbar").style.paddingTop = "4vh";
-            document.getElementById("navbar").style.paddingBottom = "3vh";
-            document.getElementsByClassName("icon1")[0].style.color = "#f9f9e6";  
-            document.getElementsByClassName("icon")[0].style.color = "#f9f9e6";  
-            document.getElementsByClassName("icon")[1].style.color = "#f9f9e6"; 
-          } else {
-            document.getElementById("navbar").style.backgroundColor = "transparent";
-            document.getElementById("navbar").style.boxShadow = "unset";
-            document.getElementById("navbar").style.paddingTop = "5vh";
-            document.getElementById("navbar").style.paddingBottom = "5vh";
-            document.getElementsByClassName("icon1")[0].style.color = "black";  
-            document.getElementsByClassName("icon")[0].style.color = "black";  
-            document.getElementsByClassName("icon")[1].style.color = "black";
-          }
-        }
-    </script>
 
 </body>
 </html>
