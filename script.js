@@ -52,6 +52,7 @@ function scrollFunction() {
     document.getElementsByClassName("icon1")[0].style.color = "#f9f9e6";  
     document.getElementsByClassName("icon")[0].style.color = "#f9f9e6";  
     document.getElementsByClassName("icon")[1].style.color = "#f9f9e6"; 
+    document.getElementsByClassName("icon")[0].style.WebKitPoint.color = "f9f9e6";
   } else {
     document.getElementById("navbar").style.backgroundColor = "transparent";
     document.getElementById("navbar").style.boxShadow = "unset";
