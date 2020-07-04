@@ -637,7 +637,7 @@ canvas {
     width: 100%;
     height: auto;
     /*background-image: linear-gradient(to bottom right, #a6ef81eb, #d5fffb, #ffeeff, #ffe3e3, #ffffdf);*/
-    background-color: #F7F7F7;
+    /*background-color: #F7F7F7;*/
 }
 .contact_description {
     text-align: center;
