@@ -71,8 +71,8 @@ a {
     float: left;
     color: #f9f9e6;
     text-align: right;
-    margin-left: 3.4vw;
-    margin-right: 3.4vw;
+    margin-left: 1.7vw;
+    margin-right: 1.7vw;
     font-size: 1.5vw;
     letter-spacing: 0.2vw;
     z-index: 14;
@@ -601,6 +601,34 @@ canvas {
     padding-left: 2vw;
     padding-right: 2vw;
     background-color: #00000066;
+}
+
+#languages_tech {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 70px;
+}
+.logo_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #F7F7F7;
+}
+.pgm_logo {
+    width: 170px;
+    margin: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.pgm_name {
+    font-family: "Raleway", sans-serif;
+    font-size:20px;
+    letter-spacing:1px;
+    color:#616161;
+    line-height:45px;
 }
 
 #contact {
